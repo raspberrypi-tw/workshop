@@ -26,7 +26,7 @@ v = 343		# (331 + 0.6*20)
 
 def measure() :
         GPIO.output(TRIGGER_PIN, GPIO.HIGH)
-        time.sleep(1/1000.0/1000.0)
+        time.sleep(0.00001)	# 10uS 
         GPIO.output(TRIGGER_PIN, GPIO.LOW)
         pulse_start = time.time()
 
