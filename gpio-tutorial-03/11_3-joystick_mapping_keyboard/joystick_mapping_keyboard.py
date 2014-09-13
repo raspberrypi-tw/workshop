@@ -41,25 +41,31 @@ try:
                 vrx_pos = ReadChannel(vrx_channel)
                 vry_pos = ReadChannel(vry_channel)
 
-                if vry_pos > 800 :
+                if vry_pos > 700 :
                         device.emit(uinput.KEY_RIGHT, 0) 
+			time.sleep(0.2)
                         device.emit(uinput.KEY_LEFT,  1) 
+			time.sleep(0.2)
                 elif vry_pos < 100 :
                         device.emit(uinput.KEY_RIGHT, 1) 
+			time.sleep(0.2)
                         device.emit(uinput.KEY_LEFT,  0) 
+			time.sleep(0.2)
                 else :
-                        device.emit(uinput.KEY_RIGHT, 0) 
-                        device.emit(uinput.KEY_LEFT,  0) 
+			pass
 
-                if vrx_pos > 800 :
+                if vrx_pos > 700 :
                         device.emit(uinput.KEY_UP,   0) 
+			time.sleep(0.2)
                         device.emit(uinput.KEY_DOWN, 1) 
+			time.sleep(0.2)
                 elif vrx_pos < 100 :
                         device.emit(uinput.KEY_UP,   1) 
+			time.sleep(0.2)
                         device.emit(uinput.KEY_DOWN, 0) 
+			time.sleep(0.2)
                 else :
-                        device.emit(uinput.KEY_UP,   0) 
-                        device.emit(uinput.KEY_DOWN, 0) 
+			pass
 
                 time.sleep(0.2)
 
