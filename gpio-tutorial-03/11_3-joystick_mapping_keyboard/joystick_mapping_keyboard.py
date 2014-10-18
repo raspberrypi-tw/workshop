@@ -42,32 +42,30 @@ try:
                 vry_pos = ReadChannel(vry_channel)
 
                 if vry_pos > 700 :
-                        device.emit(uinput.KEY_RIGHT, 0) 
-			time.sleep(0.2)
+			print("LEFT")
                         device.emit(uinput.KEY_LEFT,  1) 
-			time.sleep(0.2)
+			time.sleep(0.1)
                 elif vry_pos < 100 :
+			print("RIGHT")
                         device.emit(uinput.KEY_RIGHT, 1) 
-			time.sleep(0.2)
-                        device.emit(uinput.KEY_LEFT,  0) 
-			time.sleep(0.2)
+			time.sleep(0.1)
                 else :
-			pass
+                        device.emit(uinput.KEY_RIGHT, 0) 
+                        device.emit(uinput.KEY_LEFT,  0) 
+			time.sleep(0.1)
 
                 if vrx_pos > 700 :
-                        device.emit(uinput.KEY_UP,   0) 
-			time.sleep(0.2)
+			print("DOWN")
                         device.emit(uinput.KEY_DOWN, 1) 
-			time.sleep(0.2)
+			time.sleep(0.1)
                 elif vrx_pos < 100 :
+			print("UP")
                         device.emit(uinput.KEY_UP,   1) 
-			time.sleep(0.2)
-                        device.emit(uinput.KEY_DOWN, 0) 
-			time.sleep(0.2)
+			time.sleep(0.1)
                 else :
-			pass
-
-                time.sleep(0.2)
+                        device.emit(uinput.KEY_UP,   0) 
+                        device.emit(uinput.KEY_DOWN, 0) 
+			time.sleep(0.1)
 
 except KeyboardInterrupt:
 	print "Exception: KeyboardInterrupt"

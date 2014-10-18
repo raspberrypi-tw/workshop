@@ -3,8 +3,9 @@
 # uinput_keyboard.py
 # Display "hello" on the console
 #
-# Author : Tuomas Räsänen
+# Author : Tuomas
 # http://tjjr.fi/sw/python-uinput/ 
+# -*- coding:utf-8 -*-
 
 import time
 import uinput
